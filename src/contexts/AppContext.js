@@ -1,4 +1,5 @@
-import {createContext} from "react";
+// Libraries
+import { createContext } from "react";
 
 const AppContext = createContext();
 

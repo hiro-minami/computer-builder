@@ -1,6 +1,12 @@
-import React from "react";
+// Libraries
+import React, { useContext } from "react";
+// Context
+import AppContext from "../../contexts/AppContext";
 
 const BuildResult = () => {
+    // Context
+    const { state } = useContext(AppContext)
+    // Render
     return (
         <div className="m-2position-relative">
             <h4>Spec</h4>
@@ -16,22 +22,7 @@ const BuildResult = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>CPU</th>
-                        <th>GPU</th>
-                        <th>RAM</th>
-                        <th>Strage</th>
-                        <th>Gaming</th>
-                        <th>Working</th>
-                    </tr>
-                    <tr>
-                        <th>CPU</th>
-                        <th>GPU</th>
-                        <th>RAM</th>
-                        <th>Strage</th>
-                        <th>Gaming</th>
-                        <th>Working</th>
-                    </tr>                 
+                                 
                 </tbody>
             </table>
         </div>

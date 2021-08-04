@@ -1,10 +1,10 @@
-import {combineReducers} from "redux";
-
+// Libraries
+import { combineReducers } from "redux";
+// Reducers
 import cpu from "./cpu";
 import gpu from "./gpu";
 import ram from "./ram";
-import hdd from "./hdd";
-import ssd from "./ssd";
+import storage from "./storage";
 import build from "./build";
 
-export default combineReducers({cpu, gpu, ram, hdd, ssd, build});
+export default combineReducers({cpu, gpu, ram, storage, build});

@@ -1,4 +1,5 @@
-import {BUILD_PC} from "../actions";
+// Actions
+import { BUILD_PC } from "../actions";
 
 const build = (state = {}, action) => {
     switch(action.type) {

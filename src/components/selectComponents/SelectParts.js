@@ -1,10 +1,11 @@
+// Libraries
 import React from "react";
-
+// Components
+import BuildButton from "./BuildButton";
 import Cpu from "./Cpu";
 import Gpu from "./Gpu";
 import Ram from "./Ram";
 import Strage from "./Strage";
-import BuildButton from "./BuildButton";
 
 const SelectParts = () => {
     return (

@@ -1,3 +1,4 @@
+// Actions
 import {BUILD_CPU_MODEL} from "../actions";
 
 const cpu = (state = [], action) => {
