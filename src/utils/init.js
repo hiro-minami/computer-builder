@@ -1,6 +1,5 @@
-const init = () => {
+const Init = function() {
     const url = "https://api.recursionist.io/builder/computers?type=";
-    const partsList = ['cpu', 'gpu', 'ram', 'hdd', 'ssd'];
     const parts = {
       'cpu': [],
       'gpu': [],
@@ -8,17 +7,6 @@ const init = () => {
       'hdd': [],
       'ssd': []
     };
-    let cpuList = [];
-    let gpuList = [];
-    let ramList = [];
-    let hddList = [];
-    let ssdList = [];
-
-    partsList.forEach(key => {
-      fetch(url+key)
-      .then(response => response.json())
-        .then(data => getData(data, key));
-    })
   
     for(let key in parts) {
       fetch(url+key)
@@ -33,6 +21,7 @@ const init = () => {
     }
 
     return parts;
-};
+}();
+console.log(Init);
 
-export default init;
+export default Init;

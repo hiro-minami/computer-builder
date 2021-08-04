@@ -1,7 +1,7 @@
 import React from "react";
 
-const CpuOption = ({value}) => {
+const BrandOption = ({value}) => {
     return <option value={value}>{value}</option>;
 }
 
-export default CpuOption;
+export default BrandOption;

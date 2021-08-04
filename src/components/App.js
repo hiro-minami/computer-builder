@@ -5,18 +5,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AppContext from "../contexts/AppContext";
 import NavBar from "./NavBar";
 import Container from "./Container";
-import init from "../utils/init";
-import reducer from "../reducers"
+import reducer from "../reducers";
 
 const App = () => {
-  const partsList = init();
+  const partsList = {cpu: [], gpu: [], ram: [], hdd: [], ssd: []};
 
   const [state, dispatch] = useReducer(reducer, partsList);
 
   return (
     <AppContext.Provider value={{state, dispatch}}>
       <NavBar />
-      <Container />
+      <Container/>
     </AppContext.Provider>
   );
 }

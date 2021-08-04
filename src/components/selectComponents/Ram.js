@@ -1,6 +1,14 @@
-import React from "react";
+import React, {useEffect, useContext, useState} from "react";
+import {BUILD_RAM_MODEL} from "../../actions"
+import AppContext from "../../contexts/AppContext";
+import BrandOption from "./options/BrandOption";
+import ModelOption from "./options/ModelOption";
+import { URL } from "../../constants";
 
 const Ram = () => {
+    const {state, dispatch} = useContext(AppContext);
+    const [cpuList, setCpuList] = useState([]);
+    const [brandList,setBrandList] = useState([]);
     return (
         <div className="step3 p-2">
             <span className="h4 p-1">step3: Select your RAM</span>
