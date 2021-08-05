@@ -1,4 +1,3 @@
-// Actions
 import { BUILD_RAM_MODEL } from "../actions";
 
 const ram = (state = [], action) => {
@@ -9,6 +8,7 @@ const ram = (state = [], action) => {
             const brand = document.querySelector('#brand-of-ram').value;
             const filterList = ramList.filter(ram => ram.Brand === brand).filter(ram => ram.Model.match(/\dx/g).toString().substring(0,1) === amount);
             return filterList;
+
         default:
             return state;
     }
