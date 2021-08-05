@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/computer-builder/static/js/main.a217ae1c.chunk.js",
-    "main.js.map": "/computer-builder/static/js/main.a217ae1c.chunk.js.map",
+    "main.js": "/computer-builder/static/js/main.193666a8.chunk.js",
+    "main.js.map": "/computer-builder/static/js/main.193666a8.chunk.js.map",
     "runtime-main.js": "/computer-builder/static/js/runtime-main.fcd65e73.js",
     "runtime-main.js.map": "/computer-builder/static/js/runtime-main.fcd65e73.js.map",
     "static/css/2.4be38407.chunk.css": "/computer-builder/static/css/2.4be38407.chunk.css",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.fcd65e73.js",
     "static/css/2.4be38407.chunk.css",
     "static/js/2.d7fabb3e.chunk.js",
-    "static/js/main.a217ae1c.chunk.js"
+    "static/js/main.193666a8.chunk.js"
   ]
 }
