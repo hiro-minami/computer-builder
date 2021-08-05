@@ -1,6 +1,5 @@
-// Libraries
 import React from "react";
-// Components
+
 import BuildButton from "./BuildButton";
 import Cpu from "./Cpu";
 import Gpu from "./Gpu";

@@ -6,3 +6,5 @@ export const BUILD_STORAGE_BRAND = "BUILD_STORAGE_BRAND";
 export const BUILD_STORAGE_MODEL = "BUILD_STORAGE_MODEL";
 
 export const BUILD_PC = "BUILD_PC";
+export const DELETE_PC = "DELETE_PC";
+export const DELETE_ALL_PC = "DELETE_ALL_PC";

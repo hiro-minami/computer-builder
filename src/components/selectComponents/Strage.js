@@ -1,26 +1,23 @@
-// Libraries
 import React, { useEffect, useContext, useState } from "react";
-// Actions
+
 import { BUILD_STORAGE_BRAND, BUILD_STORAGE_MODEL, BUILD_STORAGE_SIZE } from "../../actions";
-// Conponents
+
 import GeneralOption from "./options/GeneralOption";
 import ModelOption from "./options/ModelOption";
-// Contexts
+
 import AppContext from "../../contexts/AppContext";
-// Constants
+
 import { URL } from "../../constants";
 
 const Strage = () => {
-    // Context
     const { state, dispatch } = useContext(AppContext);
-    // State
     const [hddModelList, setHddModelList] = useState([]);
     const [ssdModelList, setSsdModelList] = useState([]);
     const [hddSizeList, setHddSizeList] = useState([]);
     const [ssdSizeList, setSsdSizeList] = useState([]);
     const [hddBrandList, setHddBrandList] = useState([]);
     const [ssdBrandList, setSsdBrandList] = useState([]);
-    // Effect for HDD
+
     useEffect( () => {fetch(URL+'hdd')
       .then(response => response.json())
         .then(data => {
@@ -37,7 +34,7 @@ const Strage = () => {
             setHddModelList(data);
         })
     }, []);
-    // Effect for SSD
+
     useEffect(() => {fetch(URL+'ssd')
       .then(response => response.json())
         .then(data => {
@@ -54,7 +51,7 @@ const Strage = () => {
             setSsdModelList(data);
         })
     }, []);
-    // EventFunctrion for Size
+
     const selectSize = e => {
         e.preventDefault();
         let sizeList;
@@ -64,7 +61,7 @@ const Strage = () => {
         else sizeList = [];
         dispatch({type: BUILD_STORAGE_SIZE, sizeList});
     }
-    // EventFunction for Brand
+
     const selectBrand = e => {
         e.preventDefault();
         let sizeList;
@@ -82,7 +79,7 @@ const Strage = () => {
         }
         dispatch({type: BUILD_STORAGE_BRAND, sizeList, brandList});
     }
-    // EventFunction for Model
+
     const selectModel = e => {
         e.preventDefault();
         let sizeList;
@@ -104,7 +101,7 @@ const Strage = () => {
         }
         dispatch({type: BUILD_STORAGE_MODEL, sizeList, brandList, modelList});
     }
-    // Render
+
     return (
         <div className="step4 p-2">
             <span className="h4 p-1">step4: Select your Storage</span>
@@ -112,7 +109,7 @@ const Strage = () => {
                 <div className="col-6 p-2">
                     <span className="h6 p-2">HDD or SSD</span>
                     <select className="form-control col-6" onChange={selectSize} id="type-of-storage">
-                        <option value="-">-</option>
+                        <option value="">-</option>
                         <option value="HDD">HDD</option>
                         <option value="SSD">SSD</option>
                     </select>
@@ -120,18 +117,21 @@ const Strage = () => {
                 <div className="col-6 p-2">
                     <span className="h6 p-2">Strage</span>
                     <select className="form-control col-6" onChange={selectBrand} id="size-of-storage">
+                        <option value="">-</option>
                         {state.storage.size.map((value, index) => <GeneralOption key={index} value={value} />)}
                     </select>
                 </div>
                 <div className="col-6 p-2">
                     <span className="h6 p-2">Brand</span>
                     <select className="form-control col-6" onChange={selectModel} id="brand-of-storage">
+                        <option value="">-</option>
                         {state.storage.brand.map((value, index) => <GeneralOption key={index} value={value} />)}
                     </select>
                 </div>
                 <div className="col-6 p-2">
                     <span className="h6 p-2">Model</span>
                     <select className="form-control col-6" id="model-of-storage">
+                        <option value="">-</option>
                         {state.storage.model.map((value, index) => <ModelOption key={index} value={value} />)}
                     </select>
                 </div>
