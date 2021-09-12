@@ -11,7 +11,7 @@ const Result = ({value}) => {
             dispatch({type: DELETE_PC, id});
         }
     };
-    
+
     return (
         <tr>
             <td>{value.id}</td>
@@ -21,7 +21,7 @@ const Result = ({value}) => {
             <td>{value.benchmarkOfStorage}</td>
             <td>{value.resultOfWorking}</td>
             <td>{value.resultOfGaming}</td>
-            <td><button type="button" className="btn btn-danger" onClick={deleteButton}>削除</button></td>
+            <td><button type="button" className="btn btn-danger" onClick={deleteButton}>Delete PC</button></td>
         </tr>
     );
 };
